@@ -26,8 +26,6 @@ jobs:
   deploy:
     # build requirement
     needs: build
-    # manually running a workflow
-    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to production
